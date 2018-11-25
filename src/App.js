@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'; //this is not in use on this app
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
