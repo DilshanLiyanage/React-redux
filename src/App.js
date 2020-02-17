@@ -2,6 +2,8 @@ import axios from 'axios';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'; //this is not in use on this app
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import * as actionCreators from './store/actions/actions';
+
 
 
 //import '../../../../node_modules/react-tabs/style/react-tabs.css';
@@ -27,8 +29,8 @@ const mapStateToProps = (state) => {
 
 const mapDispachToProps = (dispach) => {
     return {
-        onAgeUp: () => dispach({ type: 'ADD', payload: 5 }),
-        onAgeDown: () => dispach({ type: 'SUB', payload: 5 })
+        onAgeUp: () => dispach(actionCreators.ageUp(1)),
+        onAgeDown: () => dispach(actionCreators.ageDown(1))
     }
 }
 
